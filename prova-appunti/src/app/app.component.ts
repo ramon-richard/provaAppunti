@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Email } from './models/email.model';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prova-appunti';
+  vettMail : Email[] = [];
 
-
-
-  sendEmail(a : HTMLInputElement,ogg : HTMLInputElement,txt : HTMLInputElement){
+sendEmail(a : HTMLInputElement,ogg : HTMLInputElement,txt : HTMLInputElement){
     console.log(a.value + " "+ ogg.value + " " + txt.value + " ")
-
+    let e = new Email(a.value,ogg.value,txt.value)
+    this.vettMail.push(e)
   }
 }

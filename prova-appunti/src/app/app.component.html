@@ -2,3 +2,9 @@
 <input type = "text" #ogg><label>oggetto</label>
 <input type = "text" #txt><label>testo</label>
 <button (click) = "sendEmail(a,ogg,txt)">invia</button>
+
+<ul>
+<li *ngFor = "let e of vettMail">
+{{e|json}}
+</li>
+</ul>
