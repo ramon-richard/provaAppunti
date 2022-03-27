@@ -3,8 +3,8 @@
 <input type = "text" #txt><label>testo</label>
 <button (click) = "sendEmail(a,ogg,txt)">invia</button>
 
-<ul>
-<li *ngFor = "let e of vettMail">
+<ul class = "card-deck">
+<li class = "card mb-1" *ngFor = "let e of vettMail">
 <app-sent-mail [email] = "e"></app-sent-mail>
 </li>
 </ul>

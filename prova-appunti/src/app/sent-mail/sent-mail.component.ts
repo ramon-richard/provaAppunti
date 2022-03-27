@@ -10,7 +10,14 @@ export class SentMailComponent implements OnInit {
 
   constructor() { }
   @Input()email : Email = null!;
+  show = false;
   ngOnInit(): void {
   }
+    onShowHide(){
+      this.show = !this.show
 
-}
+
+    }
+  }
+
+

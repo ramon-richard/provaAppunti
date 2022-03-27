@@ -4,6 +4,7 @@ messaggio per : {{email.a}}
 <p>
  oggetto : {{email.ogg}}
 </p>
-<p>
+<p *ngIf = "show">
 testo :{{email.txt}}
 </p>
+<button (click) = "onShowHide()">mostra/nascondi</button>
