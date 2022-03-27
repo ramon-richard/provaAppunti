@@ -5,6 +5,6 @@
 
 <ul>
 <li *ngFor = "let e of vettMail">
-{{e|json}}
+<app-sent-email [email] = "e"></app-sent-email>
 </li>
 </ul>
