@@ -10,11 +10,18 @@ export class SentMailComponent implements OnInit {
 
   constructor() { }
   @Input()email : Email = null!;
+  @HostBinding("class") cssColor = "white"
   show = false;
   ngOnInit(): void {
   }
     onShowHide(){
       this.show = !this.show
+
+
+    }
+    specializza(){
+  if(this.cssColor == "white")this.cssColor = "yellow"
+  else this.cssColor = "white"
 
 
     }
